@@ -1,0 +1,147 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.dark {
+    background: #322c2c;
+    color: white;
+}
+
+input {
+    position: absolute;
+    top: 20px;
+    text-align: center;
+    width: 100px;
+    font-size: 30px;
+}
+
+#time {
+    left: 20px;
+}
+
+#range-min {
+    width: 70px;
+    right: 100px;
+}
+
+#range-max {
+    width: 70px;
+    right: 20px;
+}
+
+.music-staff {
+    width: 80%;
+    align-items: center; 
+    position: relative;
+}
+
+.music-staff-body {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border-left: 4px solid black;
+    position: relative;
+}
+
+.music-staff-body-lines {
+    flex-grow: 1;
+}
+
+.left-of-music-staff-body {
+    position: absolute;
+    height: 95%;
+    transform: translateX(calc(-100% - 10px));
+}
+
+
+.g-clef {
+    position: absolute;
+    top: -51px;
+    left: -14px;
+    height: 190%;
+}
+
+.f-clef {
+    position: absolute;
+    left: 14px;
+    height: 83%;
+}
+
+.middle-line-container {
+    /* width: 100%; */
+}
+
+.line {
+    display: flex;
+    justify-content: center;
+}
+
+.middle-line-container > .line {
+    height: 26px;
+    background-color: white;
+    /* border-bottom: 1px solid black; */
+}
+
+.middle-line-container:first-child > .line:first-child {
+    /* border-top: 1px solid black; */
+}
+
+.clef-lines-container {
+    position: relative;
+}
+
+.line-container > .line {
+    height: 26px;
+    background-color: white;
+    border-bottom: 4px solid black;
+}
+
+.line-container > .line:first-child {
+    border-top: 4px solid black;
+}
+
+.middle-line {
+    background-color: white;
+    height: 138.66px;
+}
+
+@keyframes popsize {
+    from { transform: scale(.8) };
+    to { transform: scale(1) };
+}
+
+.note-container {
+    z-index: 1;
+    position: relative;
+    color: white;
+    background-image: url("img/note.svg");
+    background-size: cover;
+    width: 39px;
+    height: 31px;
+    display: flex;
+    letter-spacing: 1px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    transform: translateY(calc(-8%));
+    animation: popsize 0.5s;
+}
+
+.note {
+    position: absolute;
+}
+
+.note-container-bottom {
+    transform: translateY(calc(38%));
+}
+
+.note-container-top {
+    transform: translateY(calc(-38%));
+}

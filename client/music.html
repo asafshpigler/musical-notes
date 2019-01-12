@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="music.css" />
+</head>
+
+<body>
+    <input id="time" placeholder="seconds" type="number">
+    <input id="range-min" value="3" placeholder="min" type="number">
+    <input id="range-max" value="5" placeholder="max" type="number">
+
+    <div class="music-staff">
+        <div class="middle-line-container">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+
+        <div class="music-staff-body">
+            <img src="img/left-of-music-staff.png" alt="" class="left-of-music-staff-body">
+
+            <div class="music-staff-body-lines">
+                <div class="clef-lines-container">
+                    <img class="g-clef" src="img/g-clef.png" alt="">
+                    <div class="line-container">
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                    </div>
+                </div>
+
+                <div class="middle-line-container">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+
+                <div class="clef-lines-container">
+                    <img class="f-clef" src="img/f-clef.png" alt="">
+                    <div class="line-container">
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="middle-line-container">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </div>
+    </div>
+    <!-- <script>
+        const lines = document.getElementsByClassName('line')
+        for (var i = 0; i < lines.length; i++) {
+            const line = lines[i]
+            line.innerHTML = lines.length - i - 1
+        }
+    </script> -->
+
+    <script src="js/music.js" type="module"></script>
+</body>
+
+</html>
