@@ -1,6 +1,18 @@
 const express = require('express')
 const app = express()
-const port = 3000
+const port = process.env.PORT || 8080;
 
-app.use('/', express.static('client'))
-app.listen(port, () => console.log(`Example app listening on port ${port}!`))
+// set the view engine to ejs
+app.set('view engine', 'ejs');
+
+app.use(express.static(__dirname + '/client'));
+
+// set the home page route
+// app.get('/', function(req, res) {
+//     // ejs render automatically looks in the views folder
+//     res.render('music');
+// });
+
+app.listen(port, function() {
+    console.log('Our app is running on http://localhost:' + port);
+});
