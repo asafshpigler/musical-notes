@@ -39,14 +39,21 @@ function init() {
 
 function renderNote() {
     const note = generateNote()
-    const { line: lineIndex, position } = noteMap[note] || {}
-    const line = lines[lines.length - lineIndex - 1]
+    var noteData = noteMap[note] || {}
+    if (Array.isArray(noteData)) {
+        noteData = noteData[Math.random() > 0.5 ? 0 : 1]
+    }
+    const { line: lineIndex, position, img } = noteData
+    var line = lines[lines.length - lineIndex - 1]
     
     if (line) {
         if (prevLine) prevLine.innerHTML = ''
         prevLine = line
 
         const className = position !== 'middle' ? `note-container-${position}` : ''
-        line.innerHTML = `<div class="note-container ${className}">${note}</div>`
+        line.innerHTML = `<div class="note-container ${className}" style="background-image: url('../img/${img === 'middle' ? 'middle-c-note' : 'note'}.svg')">${note}</div>`
+    }
+    else {
+        renderNote()
     }
 }

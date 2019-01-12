@@ -1,4 +1,6 @@
 export default {
+    A5: { line: 17, position: 'bottom', img: 'middle' },
+
     G5: { line: 16, position: 'middle' },
     F5: { line: 16, position: 'bottom' },
     E5: { line: 15, position: 'middle' },
@@ -10,14 +12,8 @@ export default {
     F4: { line: 12, position: 'middle' },
     E4: { line: 12, position: 'bottom' },
     D4: { line: 11, position: 'middle' },
-    
-    // C4: { line: 11, position: 'bottom' },
-    // D4: { line: 10, position: 'middle' },
-    // C4: { line: 10, position: 'bottom' },
-    // D4: { line: 9, position: 'middle' },  
-    // C4: { line: 9, position: 'bottom' },
-    // D4: { line: 8, position: 'middle' },
-    // C4: { line: 8, position: 'bottom' },
+
+    C4: [{ line: 11, position: 'bottom', img: 'middle' } , { line: 7, position: 'top', img: 'middle' }],
 
     B3: { line: 7, position: 'middle' },
     A3: { line: 7, position: 'bottom' },
@@ -29,4 +25,7 @@ export default {
     B2: { line: 4, position: 'bottom' },
     A2: { line: 3, position: 'middle' },
     G2: { line: 3, position: 'bottom' },
+    F2: { line: 2, position: 'middle' },
+
+    E2: { line: 2, position: 'bottom', img: 'middle' },
 }
